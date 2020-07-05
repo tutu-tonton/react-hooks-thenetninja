@@ -8,9 +8,11 @@ import React, { useState } from 'react';
 
 const NewSongForm = ({ addSong }) => {
 	const [title, setTitle] = useState('');
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// console.log(title);
+		// propsのaddSongに、titleを入れて返してあげる
 		addSong(title);
 		setTitle('');
 	};
